@@ -4,13 +4,15 @@ class PagesController < ApplicationController
 
   def answer
     @question = params[:question]
-    case @question.downcase
-    when 'hello'
-      @answer = 'hello'
-    when 'what time is it?'
-      @answer = 'The same time that yesterday at the same moment.'
+    if @question[-1] == '?'
+      @answer = 'Silly question, get dressed and go to work!'
     else
-      @answer = "I don't know it"
+      case @question.downcase
+      when 'i am going to work'
+        @answer = 'Great!'
+      else
+        @answer = "I don't care, get dressed and go to work!"
+      end             
     end
   end
 end
