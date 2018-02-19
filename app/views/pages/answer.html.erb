@@ -1,6 +1,10 @@
-<h1>Pages#answer</h1>
-<p> Your question: <%= @question %> </p>
+<h1>Stupid Coaching</h1>
+<p> <%= @question %> </p>
+<p>-You</p>
 <!-- <p> The answer: I don't know it.</p> -->
-<p> The answer: <%= @answer %></p>
+<div class="answer">
+  <p><%= @answer %></p>
+  <p>- Your coach</p>
+</div>
 
 <%= link_to 'Add another question', 'ask' %>
